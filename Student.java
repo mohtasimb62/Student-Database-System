@@ -47,12 +47,25 @@ public class Student {
                 tuitionBalance += costOfCourse;
             } else { break; }
         } while (1 != 0);
+
         System.out.println("ENROLLED IN: " + courses);
         System.out.println("TUITION BALANCE: " + tuitionBalance);
     }
-}
     // view balance
+    public void viewBalance() {
+        System.out.println("Your balance is: $" + tuitionBalance);
+    }
 
     // pay tuition
+    public void payTuition(int payment) {
+        tuitionBalance -= payment;
+        System.out.println("Thank you for your payment of $" + payment);
+        viewBalance();
+    }
 
     // show status
+
+
+
+
+}
