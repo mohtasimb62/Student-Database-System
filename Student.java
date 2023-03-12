@@ -49,7 +49,6 @@ public class Student {
         } while (1 != 0);
 
         System.out.println("ENROLLED IN: " + courses);
-        System.out.println("TUITION BALANCE: " + tuitionBalance);
     }
     // view balance
     public void viewBalance() {
@@ -57,13 +56,22 @@ public class Student {
     }
 
     // pay tuition
-    public void payTuition(int payment) {
+    public void payTuition() {
+        viewBalance();
+        System.out.print("Enter your payment: $");
+        Scanner in = new Scanner(System.in);
+        int payment = in.nextInt();
         tuitionBalance -= payment;
         System.out.println("Thank you for your payment of $" + payment);
         viewBalance();
     }
 
     // show status
+    public String toString() {
+        return "Name: " + firstName + " " + lastName + 
+                "/nCourses Enrolled: " + courses + 
+                "/nBalance: $" + tuitionBalance;
+    }
 
 
 
