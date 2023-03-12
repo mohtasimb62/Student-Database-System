@@ -13,7 +13,6 @@ public class StudentDatabaseApp {
 
         // create n number of new students
         for (int n = 0; n < numOfStudents; n++) {
-            s
             students[n] = new Student();
             students[n].enroll();    // starts s1 to enroll in courses
             students[n].payTuition();
